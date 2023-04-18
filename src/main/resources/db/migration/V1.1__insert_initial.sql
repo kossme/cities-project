@@ -1,0 +1,1 @@
+COPY cities.city FROM '/db/main/initial_data/cities.csv' WITH DELIMITER AS ',' CSV HEADER ;

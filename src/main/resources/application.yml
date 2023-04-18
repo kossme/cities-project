@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: test-crud-cities-project
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/main?currentSchema=cities
+    username: postgres
+    password: postgres
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc.lob.non_contextual_creation: true
+        default_schema: cities
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    baseline-on-migrate: true
+    placeholder-replacement: false
+    table: flyway_history
+    schemas: cities
+    locations: classpath:db/migration

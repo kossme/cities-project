@@ -1,0 +1,9 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+/.idea
+/.gradle_cache/
+/out/
+/data/
+*.iml
+*.log
