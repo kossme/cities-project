@@ -1,4 +1,4 @@
-package controller;
+package service;
 
 import com.test.crud.cities.project.model.City;
 import com.test.crud.cities.project.model.CityDto;
