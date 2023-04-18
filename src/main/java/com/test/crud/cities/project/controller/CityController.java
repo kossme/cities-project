@@ -2,6 +2,7 @@ package com.test.crud.cities.project.controller;
 
 import com.test.crud.cities.project.model.CityDto;
 import com.test.crud.cities.project.service.CitiesService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -26,6 +27,7 @@ public class CityController {
     private final CitiesService citiesService;
 
     @GetMapping
+    @Operation(summary = "Get a list of cities, can specify page number, page size and perform search")
     public ResponseEntity<List<CityDto>> getAll(
             @RequestParam(required = false) Integer pageNumber,
             @RequestParam(required = false) Integer pageSize,
@@ -36,12 +38,14 @@ public class CityController {
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Get one city by id")
     public ResponseEntity<CityDto> getOneById(@PathVariable Long id) {
         log.info("Request get city by ID={}", id);
         return ResponseEntity.ok(citiesService.getOneById(id));
     }
 
     @PutMapping
+    @Operation(summary = "Edit city info")
     public ResponseEntity<CityDto> editById(@RequestBody @Valid CityDto cityDto) {
         log.info("Request edit city by ID={}", cityDto.getId());
         return ResponseEntity.ok(citiesService.editById(cityDto));
