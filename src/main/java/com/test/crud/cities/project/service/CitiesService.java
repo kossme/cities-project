@@ -45,8 +45,7 @@ public class CitiesService {
         Pageable pageable = PageRequest.of(pageNumber, pageSize, Sort.by("id").ascending());
         Specification<City> specification =
                 createSpecification("%" + ofNullable(searchText).orElse("") + "%");
-        var s = citiesRepository.findAll(specification, pageable);
-        return s;
+        return citiesRepository.findAll(specification, pageable);
     }
 
     public CityDto getOneById(Long id) {
