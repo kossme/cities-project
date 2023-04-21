@@ -1,2 +1,2 @@
-rootProject.name = "test-crud-cities-project"
+rootProject.name = "cities-project"
 

@@ -11,7 +11,7 @@ services:
     volumes:
       - ./db/main/:/db/main/
 
-  test-crud-cities-project:
+  cities-project:
     depends_on:
       - db
     build:

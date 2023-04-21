@@ -1,6 +1,6 @@
-package com.test.crud.cities.project.repository;
+package com.cities.project.repository;
 
-import com.test.crud.cities.project.model.City;
+import com.cities.project.model.city.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

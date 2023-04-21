@@ -1,9 +1,9 @@
 package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.test.crud.cities.project.controller.CityController;
-import com.test.crud.cities.project.model.CityDto;
-import com.test.crud.cities.project.service.CitiesService;
+import com.cities.project.controller.CityController;
+import com.cities.project.model.city.CityDto;
+import com.cities.project.service.CitiesService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

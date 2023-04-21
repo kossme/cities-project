@@ -1,11 +1,9 @@
-package com.test.crud.cities.project.service;
+package com.cities.project.service;
 
-import com.test.crud.cities.project.model.City;
-import com.test.crud.cities.project.model.CityDto;
-import com.test.crud.cities.project.model.mapper.CityDtoMapper;
-import com.test.crud.cities.project.repository.CitiesRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import com.cities.project.model.city.City;
+import com.cities.project.model.city.CityDto;
+import com.cities.project.model.city.mapper.CityDtoMapper;
+import com.cities.project.repository.CitiesRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -31,7 +29,7 @@ public class CitiesService {
     private final CitiesRepository citiesRepository;
     private final CityDtoMapper cityDtoMapper;
 
-    private final int DEFAULT_PAGE_SIZE = 10;
+    public static final int DEFAULT_PAGE_SIZE = 10;
 
     public List<CityDto> getAll(Integer pageNumber, Integer pageSize, String searchText) {
         Page<City> pagedCities = getAllEntities(pageNumber, pageSize, searchText);
@@ -62,7 +60,7 @@ public class CitiesService {
 
     private City findOneById(Long id) {
         return citiesRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(
-                String.format("Запись с id: %S не найдена в базе данных", id)));
+                String.format("Record with id: %S not found in database", id)));
     }
 
     private Specification<City> createSpecification(String search) {

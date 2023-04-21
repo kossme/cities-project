@@ -1,7 +1,7 @@
-package com.test.crud.cities.project.model.mapper;
+package com.cities.project.model.city.mapper;
 
-import com.test.crud.cities.project.model.City;
-import com.test.crud.cities.project.model.CityDto;
+import com.cities.project.model.city.City;
+import com.cities.project.model.city.CityDto;
 import org.mapstruct.Builder;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

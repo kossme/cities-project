@@ -1,4 +1,4 @@
-package com.test.crud.cities.project.model;
+package com.cities.project.model.city;
 
 import lombok.Data;
 

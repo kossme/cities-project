@@ -1,12 +1,13 @@
-package com.test.crud.cities.project.controller;
+package com.cities.project.controller;
 
-import com.test.crud.cities.project.model.CityDto;
-import com.test.crud.cities.project.service.CitiesService;
+import com.cities.project.model.city.CityDto;
+import com.cities.project.service.CitiesService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -45,6 +46,7 @@ public class CityController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ALLOW_EDIT')")
     @Operation(summary = "Edit city info")
     public ResponseEntity<CityDto> editById(@RequestBody @Valid CityDto cityDto) {
         log.info("Request edit city by ID={}", cityDto.getId());

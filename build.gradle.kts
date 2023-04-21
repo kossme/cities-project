@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "2.1.8.RELEASE"
+    id("org.springframework.boot") version "2.2.13.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
 }
 
@@ -28,16 +28,11 @@ dependencies {
     //Mapstruct
     implementation("org.mapstruct:mapstruct:1.4.2.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.4.2.Final")
+    //Security
+    implementation("org.springframework.boot:spring-boot-starter-security:2.1.18.RELEASE")
     //Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testImplementation("org.mockito:mockito-core:4.2.0")
-    testImplementation("org.mockito:mockito-junit-jupiter:4.2.0")
-    testImplementation("com.h2database:h2:2.1.214")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("com.h2database:h2")
+    testImplementation("org.springframework.security:spring-security-test")
 }
-
-/*tasks.test {
-    useJUnitPlatform()
-}*/
-

@@ -1,19 +1,16 @@
 package service;
 
-import com.test.crud.cities.project.model.City;
-import com.test.crud.cities.project.model.CityDto;
-import com.test.crud.cities.project.model.mapper.CityDtoMapper;
-import com.test.crud.cities.project.repository.CitiesRepository;
-import com.test.crud.cities.project.service.CitiesService;
+import com.cities.project.model.city.City;
+import com.cities.project.model.city.CityDto;
+import com.cities.project.model.city.mapper.CityDtoMapper;
+import com.cities.project.repository.CitiesRepository;
+import com.cities.project.service.CitiesService;
 import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
